@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+
+<serializer xmlns="http://symfony.com/schema/dic/serializer-mapping"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/dic/serializer-mapping https://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
+>
+    <class name="Dameerv\SyliusSupplierPlugin\Entity\Supplier">
+        <attribute name="id">
+            <group>admin:supplier:read</group>
+            <group>shop:supplier:read</group>
+        </attribute>
+        <attribute name="slug">
+            <group>admin:supplier:create</group>
+            <group>admin:supplier:read</group>
+            <group>admin:supplier:update</group>
+            <group>shop:supplier:read</group>
+        </attribute>
+        <attribute name="name">
+            <group>admin:supplier:create</group>
+            <group>admin:supplier:read</group>
+            <group>admin:supplier:update</group>
+            <group>shop:supplier:read</group>
+        </attribute>
+        <attribute name="email">
+            <group>admin:supplier:create</group>
+            <group>admin:supplier:read</group>
+            <group>admin:supplier:update</group>
+            <group>shop:supplier:read</group>
+        </attribute>
+        <attribute name="logoName">
+            <group>admin:supplier:create</group>
+            <group>admin:supplier:read</group>
+            <group>admin:supplier:update</group>
+            <group>shop:supplier:read</group>
+        </attribute>
+        <attribute name="enabled">
+            <group>admin:supplier:create</group>
+            <group>admin:supplier:read</group>
+            <group>admin:supplier:update</group>
+            <group>shop:supplier:read</group>
+        </attribute>
+        <attribute name="translations">
+            <group>admin:supplier:create</group>
+            <group>admin:supplier:read</group>
+            <group>admin:supplier:update</group>
+            <group>shop:supplier:read</group>
+        </attribute>
+        <attribute name="products">
+            <group>admin:supplier:create</group>
+            <group>admin:supplier:read</group>
+            <group>admin:supplier:update</group>
+            <group>shop:supplier:read</group>
+        </attribute>
+        <attribute name="channels">
+            <group>admin:supplier:create</group>
+            <group>admin:supplier:read</group>
+            <group>admin:supplier:update</group>
+            <group>shop:supplier:read</group>
+        </attribute>
+        <attribute name="createdAt">
+            <group>admin:supplier:read</group>
+            <group>shop:supplier:read</group>
+        </attribute>
+        <attribute name="updatedAt">
+            <group>admin:supplier:read</group>
+            <group>shop:supplier:read</group>
+        </attribute>
+    </class>
+</serializer>
