@@ -1,12 +1,12 @@
 dameerv_sylius_supplier_plugin:
-    vendor:
+    supplier:
         slug:
-            unique: There is an existing vendor with this slug.
+            unique: There is an existing supplier with this slug.
             not_blank: Slug cannot be blank.
             min_length: Slug must be at least {{ limit }} characters long.
             max_length: Slug can not be longer than {{ limit }} characters.
         name:
-            unique: There is an existing vendor with this name.
+            unique: There is an existing supplier with this name.
             not_blank: Name cannot be blank.
             min_length: Name must be at least {{ limit }} characters long.
             max_length: Name can not be longer than {{ limit }} characters.
@@ -18,9 +18,9 @@ dameerv_sylius_supplier_plugin:
             max_length: Email can not be longer than {{ limit }} characters.
         logo_file:
             not_blank: Logo cannot be blank.
-    vendor_translation:
+    supplier_translation:
         description:
             not_blank: Description cannot be blank.
     product:
-        vendor:
-            not_blank: Please select a vendor.
+        supplier:
+            not_blank: Please select a supplier.

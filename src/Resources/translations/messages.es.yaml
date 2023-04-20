@@ -1,18 +1,18 @@
 dameerv_sylius_supplier_plugin:
     ui:
-        vendor: Vendedor
-        vendors: Vendedores
-        edit_vendor: Editar vendedor
-        new_vendor: Nuevo vendedor
+        supplier: Vendedor
+        suppliers: Vendedores
+        edit_supplier: Editar vendedor
+        new_supplier: Nuevo vendedor
         profile: Perfil
-        manage_vendors: Administrar vendedores
+        manage_suppliers: Administrar vendedores
     menu:
         admin:
-            vendors: Vendedores
+            suppliers: Vendedores
     form:
         product:
-            select_vendor: Selecciona vendedor
-        vendor:
+            select_supplier: Selecciona vendedor
+        supplier:
             slug: Slug
             email: Email
             translations: Traducciones

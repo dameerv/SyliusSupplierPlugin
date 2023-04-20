@@ -1,0 +1,22 @@
+dameerv_sylius_supplier_plugin:
+    ui:
+        supplier: Поставщик
+        suppliers: Поставщики
+        edit_supplier: Изменение поставщика
+        new_supplier: Добавить поставщика
+        profile: Профиль
+        manage_suppliers: Управление поставщиками
+    menu:
+        admin:
+            suppliers: Поставщики
+    form:
+        product:
+            select_supplier: Выбрать поставщика
+        supplier:
+            slug: ЧПУ
+            email: Email
+            translations: Переводы
+            description: Описание
+            logo: Логотип
+            channels: Каналы
+            extra_emails: Дополнительные email-ы
