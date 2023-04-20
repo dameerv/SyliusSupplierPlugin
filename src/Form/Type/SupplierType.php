@@ -31,10 +31,11 @@ final class SupplierType extends AbstractResourceType
                 'label' => 'dameerv_sylius_supplier_plugin.form.supplier.slug',
             ])
             ->add('enabled', CheckboxType::class, [
+                'required' => false,
                 'label' => 'sylius.ui.enabled',
             ])
-
             ->add('isVip', CheckboxType::class, [
+                'required' => false,
                 'label' => 'dameerv_sylius_supplier_plugin.form.supplier.is_vip',
             ])
             ->add('translations', ResourceTranslationsType::class, [
@@ -45,7 +46,7 @@ final class SupplierType extends AbstractResourceType
                 'label' => 'dameerv_sylius_supplier_plugin.form.supplier.email',
             ])
             ->add('logoFile', FileType::class, [
-                 'label' => 'dameerv_sylius_supplier_plugin.form.supplier.logo',
+                'label' => 'dameerv_sylius_supplier_plugin.form.supplier.logo',
             ])
             ->add('channels', ChannelChoiceType::class, [
                 'required' => false,
