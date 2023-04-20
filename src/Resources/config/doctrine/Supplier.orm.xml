@@ -16,6 +16,7 @@
         <field name="email" type="string" unique="true"/>
         <field name="logoName" type="string" column="logo_name"/>
         <field name="enabled" type="boolean"/>
+        <field name="isVip" type="boolean"/>
         <field name="position" type="integer">
             <gedmo:sortable-position />
         </field>

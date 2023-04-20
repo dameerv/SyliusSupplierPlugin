@@ -33,6 +33,10 @@ final class SupplierType extends AbstractResourceType
             ->add('enabled', CheckboxType::class, [
                 'label' => 'sylius.ui.enabled',
             ])
+
+            ->add('isVip', CheckboxType::class, [
+                'label' => 'dameerv_sylius_supplier_plugin.form.supplier.is_vip',
+            ])
             ->add('translations', ResourceTranslationsType::class, [
                 'entry_type' => SupplierTranslationType::class,
                 'label' => 'dameerv_sylius_supplier_plugin.form.supplier.translations',

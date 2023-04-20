@@ -20,3 +20,4 @@ dameerv_sylius_supplier_plugin:
             logo: Logo
             channels: Channels
             extra_emails: Extra emails
+            is_vip: VIP

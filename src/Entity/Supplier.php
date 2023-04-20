@@ -30,6 +30,7 @@ class Supplier implements SupplierInterface
     protected ?File $logoFile = null;
     protected ?string $logoName = null;
     protected ?int $position = null;
+    protected bool $isVip = false;
 
     /**
      * @psalm-var Collection<array-key, ChannelInterface>
@@ -232,5 +233,21 @@ class Supplier implements SupplierInterface
     protected function createTranslation(): TranslationInterface
     {
         return new SupplierTranslation();
+    }
+
+    /**
+     * @return bool
+     */
+    public function isVip(): bool
+    {
+        return $this->isVip;
+    }
+
+    /**
+     * @param bool $isVip
+     */
+    public function setIsVip(bool $isVip): void
+    {
+        $this->isVip = $isVip;
     }
 }

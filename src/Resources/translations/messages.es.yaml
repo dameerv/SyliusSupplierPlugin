@@ -1,17 +1,17 @@
 dameerv_sylius_supplier_plugin:
     ui:
-        supplier: Vendedor
-        suppliers: Vendedores
-        edit_supplier: Editar vendedor
-        new_supplier: Nuevo vendedor
+        supplier: Proveedor
+        suppliers: Proveedores
+        edit_supplier: Editar proveedor
+        new_supplier: Nuevo proveedor
         profile: Perfil
-        manage_suppliers: Administrar vendedores
+        manage_suppliers: Administrar proveedores
     menu:
         admin:
-            suppliers: Vendedores
+            suppliers: Proveedores
     form:
         product:
-            select_supplier: Selecciona vendedor
+            select_supplier: Selecciona proveedor
         supplier:
             slug: Slug
             email: Email
@@ -20,3 +20,4 @@ dameerv_sylius_supplier_plugin:
             logo: Logo
             channels: Tiendas
             extra_emails: Emails extra
+            is_vip: VIP
