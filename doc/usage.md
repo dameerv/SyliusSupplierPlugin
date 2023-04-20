@@ -8,7 +8,7 @@ Feel free to modify the plugin templates like you want.
 To render supplier by channel you can do something like this:
 
 ```twig
-{{ render(url('dameev_sylius_supplier_shop_partial_supplier_index_by_channel', {'template': '@DameervSyliusSupplierPlugin/Shop/Supplier/_suppliers.html.twig'})) }}
+{{ render(url('dameerv_sylius_supplier_shop_partial_supplier_index_by_channel', {'template': '@DameervSyliusSupplierPlugin/Shop/Supplier/_suppliers.html.twig'})) }}
 ```
 
 ### Form validation group

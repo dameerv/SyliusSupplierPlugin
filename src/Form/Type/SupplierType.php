@@ -28,29 +28,29 @@ final class SupplierType extends AbstractResourceType
                 'label' => 'sylius.ui.name',
             ])
             ->add('slug', TextType::class, [
-                'label' => 'dameev_sylius_supplier_plugin.form.supplier.slug',
+                'label' => 'dameerv_sylius_supplier_plugin.form.supplier.slug',
             ])
             ->add('enabled', CheckboxType::class, [
                 'label' => 'sylius.ui.enabled',
             ])
             ->add('translations', ResourceTranslationsType::class, [
                 'entry_type' => SupplierTranslationType::class,
-                'label' => 'dameev_sylius_supplier_plugin.form.supplier.translations',
+                'label' => 'dameerv_sylius_supplier_plugin.form.supplier.translations',
             ])
             ->add('email', EmailType::class, [
-                'label' => 'dameev_sylius_supplier_plugin.form.supplier.email',
+                'label' => 'dameerv_sylius_supplier_plugin.form.supplier.email',
             ])
             ->add('logoFile', FileType::class, [
-                 'label' => 'dameev_sylius_supplier_plugin.form.supplier.logo',
+                 'label' => 'dameerv_sylius_supplier_plugin.form.supplier.logo',
             ])
             ->add('channels', ChannelChoiceType::class, [
                 'required' => false,
                 'multiple' => true,
                 'expanded' => true,
-                'label' => 'dameev_sylius_supplier_plugin.form.supplier.channels',
+                'label' => 'dameerv_sylius_supplier_plugin.form.supplier.channels',
             ])
             ->add('extraEmails', CollectionType::class, [
-                'label' => 'dameev_sylius_supplier_plugin.form.supplier.extra_emails',
+                'label' => 'dameerv_sylius_supplier_plugin.form.supplier.extra_emails',
                 'entry_type' => SupplierEmailType::class,
                 'allow_add' => true,
                 'allow_delete' => true,

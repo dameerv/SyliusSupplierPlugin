@@ -1,40 +1,40 @@
 sylius_ui:
     events:
-        dameev_sylius_supplier_plugin.shop.supplier.product.index.before_vertical_menu:
+        dameerv_sylius_supplier_plugin.shop.supplier.product.index.before_vertical_menu:
             blocks:
                 legacy:
                     template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
                     context:
-                        event: dameev_sylius_supplier_plugin.shop.supplier.product.index.before_vertical_menu
+                        event: dameerv_sylius_supplier_plugin.shop.supplier.product.index.before_vertical_menu
 
-        dameev_sylius_supplier_plugin.shop.supplier.product.index.after_vertical_menu:
+        dameerv_sylius_supplier_plugin.shop.supplier.product.index.after_vertical_menu:
             blocks:
                 legacy:
                     template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
                     context:
-                        event: dameev_sylius_supplier_plugin.shop.supplier.product.index.after_vertical_menu
+                        event: dameerv_sylius_supplier_plugin.shop.supplier.product.index.after_vertical_menu
 
-        dameev_sylius_supplier_plugin.shop.supplier.product.index.before_list:
+        dameerv_sylius_supplier_plugin.shop.supplier.product.index.before_list:
             blocks:
                 legacy:
                     template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
                     context:
-                        event: dameev_sylius_supplier_plugin.shop.supplier.product.index.before_list
+                        event: dameerv_sylius_supplier_plugin.shop.supplier.product.index.before_list
 
-        dameev_sylius_supplier_plugin.shop.supplier.product.index.before_pagination:
+        dameerv_sylius_supplier_plugin.shop.supplier.product.index.before_pagination:
             blocks:
                 legacy:
                     template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
                     context:
-                        event: dameev_sylius_supplier_plugin.shop.supplier.product.index.before_pagination
+                        event: dameerv_sylius_supplier_plugin.shop.supplier.product.index.before_pagination
 
-        dameev_sylius_supplier_plugin.shop.supplier.product.index.search:
+        dameerv_sylius_supplier_plugin.shop.supplier.product.index.search:
             blocks:
                 before_search_legacy:
                     template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
                     priority: 35
                     context:
-                        event: dameev_sylius_supplier_plugin.shop.supplier.product.index.before_search
+                        event: dameerv_sylius_supplier_plugin.shop.supplier.product.index.before_search
                 search:
                     template: "@DameervSyliusSupplierPlugin/Shop/Supplier/Product/Index/_search.html.twig"
                     priority: 30
@@ -42,7 +42,7 @@ sylius_ui:
                     template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
                     priority: 25
                     context:
-                        event: dameev_sylius_supplier_plugin.shop.supplier.product.index.after_search
+                        event: dameerv_sylius_supplier_plugin.shop.supplier.product.index.after_search
                 pagination:
                     template: "@DameervSyliusSupplierPlugin/Shop/Supplier/Product/Index/_pagination.html.twig"
                     priority: 20
@@ -50,7 +50,7 @@ sylius_ui:
                     template: "@DameervSyliusSupplierPlugin/Shop/Supplier/Product/Index/_sorting.html.twig"
                     priority: 10
 
-        dameev_sylius_supplier_plugin.shop.supplier.index.header:
+        dameerv_sylius_supplier_plugin.shop.supplier.index.header:
             blocks:
                 breadcrumb:
                     template: "@DameervSyliusSupplierPlugin/Shop/Supplier/Header/_breadcrumb.html.twig"
@@ -59,7 +59,7 @@ sylius_ui:
                     template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
                     priority: 15
                     context:
-                        event: dameev_sylius_supplier_plugin.shop.supplier.index.header.before
+                        event: dameerv_sylius_supplier_plugin.shop.supplier.index.header.before
                 header:
                     template: "@DameervSyliusSupplierPlugin/Shop/Supplier/Header/_content.html.twig"
                     priority: 10
@@ -67,22 +67,22 @@ sylius_ui:
                     template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
                     priority: 5
                     context:
-                        event: dameev_sylius_supplier_plugin.shop.supplier.index.header.after
+                        event: dameerv_sylius_supplier_plugin.shop.supplier.index.header.after
 
-        dameev_sylius_supplier_plugin.shop.supplier.index.before_pagination:
+        dameerv_sylius_supplier_plugin.shop.supplier.index.before_pagination:
             blocks:
                 legacy:
                     template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
                     context:
-                        event: dameev_sylius_supplier_plugin.shop.supplier.index.before_pagination
+                        event: dameerv_sylius_supplier_plugin.shop.supplier.index.before_pagination
 
-        dameev_sylius_supplier_plugin.shop.supplier.index.search:
+        dameerv_sylius_supplier_plugin.shop.supplier.index.search:
             blocks:
                 before_search_legacy:
                     template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
                     priority: 35
                     context:
-                        event: dameev_sylius_supplier_plugin.shop.supplier.index.before_search
+                        event: dameerv_sylius_supplier_plugin.shop.supplier.index.before_search
                 search:
                     template: "@DameervSyliusSupplierPlugin/Shop/Supplier/Index/_search.html.twig"
                     priority: 30
@@ -90,7 +90,7 @@ sylius_ui:
                     template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
                     priority: 25
                     context:
-                        event: dameev_sylius_supplier_plugin.shop.supplier.index.after_search
+                        event: dameerv_sylius_supplier_plugin.shop.supplier.index.after_search
                 pagination:
                     template: "@DameervSyliusSupplierPlugin/Shop/Supplier/Index/_pagination.html.twig"
                     priority: 20
@@ -98,13 +98,13 @@ sylius_ui:
                     template: "@DameervSyliusSupplierPlugin/Shop/Supplier/Index/_sorting.html.twig"
                     priority: 10
 
-        dameev_sylius_supplier_plugin.shop.supplier.index.list:
+        dameerv_sylius_supplier_plugin.shop.supplier.index.list:
             blocks:
                 before_list_legacy:
                     template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
                     priority: 25
                     context:
-                        event: dameev_sylius_supplier_plugin.shop.supplier.index.before_list
+                        event: dameerv_sylius_supplier_plugin.shop.supplier.index.before_list
                 list:
                     template: "@DameervSyliusSupplierPlugin/Shop/Supplier/Index/_list.html.twig"
                     priority: 20
@@ -112,4 +112,4 @@ sylius_ui:
                     template: "@SyliusUi/Block/_legacySonataEvent.html.twig"
                     priority: 15
                     context:
-                        event: dameev_sylius_supplier_plugin.shop.supplier.index.after_list
+                        event: dameerv_sylius_supplier_plugin.shop.supplier.index.after_list

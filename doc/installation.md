@@ -27,11 +27,11 @@ imports:
 
 ```yml
 # config/routes.yaml
-dameev_sylius_supplier_plugin_admin:
+dameerv_sylius_supplier_plugin_admin:
     resource: "@DameervSyliusSupplierPlugin/Resources/config/routing/admin.yaml"
     prefix: /admin
 
-dameev_sylius_supplier_plugin_shop:
+dameerv_sylius_supplier_plugin_shop:
     resource: "@DameervSyliusSupplierPlugin/Resources/config/routing/shop.yaml"
     prefix: /{_locale}/suppliers
     requirements:
