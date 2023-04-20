@@ -4,7 +4,7 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="https://api-platform.com/schema/metadata https://api-platform.com/schema/metadata/metadata-2.0.xsd"
 >
-    <resource class="%dameerv_sylius_supplier_plugin.model.supplierr_translation.class%" shortName="SupplierTranslation">
+    <resource class="%dameerv_sylius_supplier_plugin.model.supplier_translation.class%" shortName="SupplierTranslation">
         <attribute name="validation_groups">dameerv</attribute>
 
         <collectionOperations />
