@@ -1,8 +1,0 @@
-dameerv_sylius_supplier_plugin_shop_supplier_index:
-    path: /
-    methods: [GET]
-    defaults:
-        _controller: dameerv_sylius_supplier_plugin.controller.supplier:indexAction
-        _sylius:
-            template: '@DameervSyliusSupplierPlugin/Shop/Supplier/index.html.twig'
-            grid: dameerv_sylius_supplier_plugin_shop_supplier

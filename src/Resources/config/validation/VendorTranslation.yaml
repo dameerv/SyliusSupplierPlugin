@@ -1,6 +1,0 @@
-Dameerv\SyliusSupplierPlugin\Entity\SupplierTranslation:
-    properties:
-        description:
-            - NotBlank:
-                message: 'dameerv_sylius_supplier_plugin.supplier_translation.description.not_blank'
-                groups: ['dameerv']
