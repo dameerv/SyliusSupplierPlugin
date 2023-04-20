@@ -1,0 +1,19 @@
+sylius_resource:
+    resources:
+        dameerv_sylius_supplier_plugin.supplier:
+            driver: doctrine/orm
+            classes:
+                model: Dameerv\SyliusSupplierPlugin\Entity\Supplier
+                interface: Dameerv\SyliusSupplierPlugin\Entity\SupplierInterface
+                form: Dameerv\SyliusSupplierPlugin\Form\Type\SupplierType
+                repository: Dameerv\SyliusSupplierPlugin\Repository\SupplierRepository
+                controller: Dameerv\SyliusSupplierPlugin\Controller\SupplierController
+                factory: Sylius\Component\Resource\Factory\Factory
+            translation:
+                classes:
+                    model: Dameerv\SyliusSupplierPlugin\Entity\SupplierTranslation
+                    interface: Dameerv\SyliusSupplierPlugin\Entity\SupplierTranslationInterface
+                    form: Dameerv\SyliusSupplierPlugin\Form\Type\SupplierTranslationType
+                    repository: Sylius\Bundle\ResourceBundle\Doctrine\ORM\EntityRepository
+                    controller: Sylius\Bundle\ResourceBundle\Controller\ResourceController
+                    factory: Sylius\Component\Resource\Factory\Factory

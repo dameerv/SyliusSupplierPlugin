@@ -1,0 +1,11 @@
+<div class="ui breadcrumb">
+    <a href="{{ path('sylius_shop_homepage') }}" class="section">{{ 'sylius.ui.home'|trans }}</a>
+    <div class="divider"> / </div>
+    <a href="{{ path('dameev_sylius_supplier_plugin_shop_supplier_index') }}" class="section">
+        {{ 'dameev_sylius_supplier_plugin.ui.suppliers'|trans }}
+    </a>
+    <div class="divider"> / </div>
+    <div class="active section">
+        {{ supplier.name }}
+    </div>
+</div>

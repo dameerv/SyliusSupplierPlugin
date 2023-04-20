@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+
+<resources xmlns="https://api-platform.com/schema/metadata"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="https://api-platform.com/schema/metadata https://api-platform.com/schema/metadata/metadata-2.0.xsd"
+>
+    <resource class="%dameev_sylius_supplier_plugin.model.supplier.class%" shortName="Supplier">
+        <attribute name="validation_groups">dameerv</attribute>
+
+        <collectionOperations>
+            <collectionOperation name="admin_get">
+                <attribute name="method">GET</attribute>
+                <attribute name="path">/admin/suppliers</attribute>
+                <attribute name="normalization_context">
+                    <attribute name="groups">admin:supplier:read</attribute>
+                </attribute>
+            </collectionOperation>
+
+            <collectionOperation name="admin_post">
+                <attribute name="method">POST</attribute>
+                <attribute name="path">/admin/suppliers</attribute>
+                <attribute name="denormalization_context">
+                    <attribute name="groups">admin:supplier:create</attribute>
+                </attribute>
+            </collectionOperation>
+
+            <collectionOperation name="shop_get">
+                <attribute name="method">GET</attribute>
+                <attribute name="path">/shop/suppliers</attribute>
+                <attribute name="normalization_context">
+                    <attribute name="groups">shop:supplier:read</attribute>
+                </attribute>
+            </collectionOperation>
+        </collectionOperations>
+
+        <itemOperations>
+            <itemOperation name="admin_get">
+                <attribute name="method">GET</attribute>
+                <attribute name="path">/admin/suppliers/{slug}</attribute>
+                <attribute name="normalization_context">
+                    <attribute name="groups">admin:supplier:read</attribute>
+                </attribute>
+            </itemOperation>
+
+            <itemOperation name="admin_put">
+                <attribute name="method">PUT</attribute>
+                <attribute name="path">/admin/suppliers/{slug}</attribute>
+                <attribute name="denormalization_context">
+                    <attribute name="groups">admin:supplier:update</attribute>
+                </attribute>
+            </itemOperation>
+
+            <itemOperation name="admin_delete">
+                <attribute name="method">DELETE</attribute>
+                <attribute name="path">/admin/suppliers/{slug}</attribute>
+            </itemOperation>
+
+            <itemOperation name="shop_get">
+                <attribute name="method">GET</attribute>
+                <attribute name="path">/shop/suppliers/{slug}</attribute>
+                <attribute name="normalization_context">
+                    <attribute name="groups">shop:supplier:read</attribute>
+                </attribute>
+            </itemOperation>
+        </itemOperations>
+
+        <property name="id" identifier="false" writable="false"/>
+        <property name="slug" identifier="true" required="true"/>
+        <property name="name" required="true"/>
+        <property name="email" required="true"/>
+        <property name="logoName" required="true"/>
+        <property name="enabled" readable="true" writable="true"/>
+        <property name="translations" required="true">
+            <attribute name="openapi_context">
+                <attribute name="type">object</attribute>
+                <attribute name="example">
+                    <attribute name="en_US">
+                        <attribute name="description">string</attribute>
+                        <attribute name="locale">string</attribute>
+                    </attribute>
+                </attribute>
+            </attribute>
+        </property>
+        <property name="products" required="false"/>
+        <property name="channels" required="false"/>
+        <property name="createdAt" writable="false"/>
+        <property name="updatedAt" writable="false"/>
+    </resource>
+</resources>

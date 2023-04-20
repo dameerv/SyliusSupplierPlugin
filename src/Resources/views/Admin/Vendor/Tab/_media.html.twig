@@ -1,0 +1,13 @@
+{% form_theme form '@DameervSyliusSupplierPlugin/Form/imagesTheme.html.twig' %}
+
+<div class="ui tab" data-tab="media">
+    <h3 class="ui top attached header">{{ 'sylius.ui.media'|trans }}</h3>
+
+    <div class="ui attached segment">
+        <div class="ui segment dameerv-image">
+            {{ form_row(form.logoFile) }}
+        </div>
+
+        {{ sylius_template_event(['dameerv_sylius_supplier_plugin.admin.supplier.' ~ action ~ '.tab_media', 'dameerv_sylius_supplier_plugin.admin.supplier.tab_media'], {'form': form}) }}
+    </div>
+</div>

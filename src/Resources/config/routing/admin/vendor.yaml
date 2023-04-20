@@ -1,0 +1,23 @@
+dameerv_sylius_supplier_plugin_admin_supplier:
+    resource: |
+        alias: dameerv_sylius_supplier_plugin.supplier
+        section: admin
+        templates: "@SyliusAdmin/Crud"
+        except: ['show']
+        redirect: index
+        grid: dameerv_sylius_supplier_plugin_admin_supplier
+        permission: true
+        vars:
+            all:
+                subheader: dameerv_sylius_supplier_plugin.ui.manage_suppliers
+                templates:
+                    form: '@DameervSyliusSupplierPlugin/Admin/Supplier/_form.html.twig'
+            index:
+                icon: trademark
+    type: sylius.resource
+
+dameerv_sylius_supplier_plugin_admin_supplier_update_position:
+    path: /suppliers/update
+    methods: [PUT]
+    defaults:
+        _controller: dameerv_sylius_supplier_plugin.controller.supplier:updateSupplierPositionsAction

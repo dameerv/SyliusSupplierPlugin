@@ -1,0 +1,13 @@
+services:
+    dameerv_sylius_supplier_plugin.filesystem.supplier_logo:
+        class: Gaufrette\Filesystem
+        arguments:
+            - 'supplier_logo'
+        factory:
+            - '@knp_gaufrette.filesystem_map'
+            - 'get'
+
+    dameerv_sylius_supplier_plugin.uploader.supplier_logo:
+        class: Dameerv\SyliusSupplierPlugin\Uploader\SupplierLogoUploader
+        arguments:
+            - '@dameerv_sylius_supplier_plugin.filesystem.supplier_logo'

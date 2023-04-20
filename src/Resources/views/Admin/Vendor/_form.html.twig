@@ -1,0 +1,2 @@
+{% set menu = knp_menu_get('dameerv_sylius_supplier_plugin.admin.supplier_form', [], {'supplier': supplier}) %}
+{{ knp_menu_render(menu, {'template': '@DameervSyliusVSupplierPlugin/Admin/supplier/_menu.html.twig', 'form': form, 'supplier': supplier}) }}

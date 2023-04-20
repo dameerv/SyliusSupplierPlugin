@@ -1,0 +1,10 @@
+<div class="column" {{ sylius_test_html_attribute('supplier') }}>
+    <a href="{{ path('dameerv_sylius_supplier_plugin_shop_supplier_product_index', {'slug': supplier.slug} ) }}" class="ui fluid card">
+        <div class="image">
+            <img src="{{ supplier.logoName|imagine_filter('dameerv_sylius_supplier_plugin_logo') }}" alt="{{ supplier.name }}">
+        </div>
+        <div class="content">
+            <div class="description">{{ supplier.name }}</div>
+        </div>
+    </a>
+</div>

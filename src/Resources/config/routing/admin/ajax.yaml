@@ -1,0 +1,3 @@
+dameerv_sylius_supplier_plugin_ajax_supplier:
+    resource: ajax/supplier.yaml
+    prefix: /supplier

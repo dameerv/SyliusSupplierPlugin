@@ -1,0 +1,70 @@
+sylius_grid:
+    templates:
+        action:
+            update_supplier_positions: "@DameervSyliusSupplierPlugin/Admin/Supplier/Grid/Action/updatePositions.html.twig"
+    grids:
+        dameerv_sylius_supplier_plugin_admin_supplier:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: "%dameerv_sylius_supplier_plugin.model.supplier.class%"
+            sorting:
+                position: asc
+            fields:
+                name:
+                    type: string
+                    label: sylius.ui.name
+                    sortable: ~
+                email:
+                    type: string
+                    label: sylius.ui.email
+                    sortable: ~
+                logo:
+                    type: twig
+                    label: sylius.ui.image
+                    path: logoName
+                    options:
+                        template: "@DameervSyliusSupplierPlugin/Field/_image.html.twig"
+                enabled:
+                    type: twig
+                    label: sylius.ui.enabled
+                    sortable: ~
+                    options:
+                        template: "@SyliusUi/Grid/Field/enabled.html.twig"
+                position:
+                    type: twig
+                    label: sylius.ui.position
+                    path: .
+                    sortable: position
+                    options:
+                        template: "@DameervSyliusSupplierPlugin/Admin/Supplier/Grid/Field/position.html.twig"
+                createdAt:
+                    type: datetime
+                    label: sylius.ui.creation_date
+                    sortable: ~
+                    options:
+                        format: d-m-Y H:i
+            filters:
+                name:
+                    type: string
+                    label: sylius.ui.name
+                email:
+                    type: string
+                    label: sylius.ui.email
+                enabled:
+                    type: boolean
+                    label: sylius.ui.enabled
+                createdAt:
+                    type: date
+                    label: sylius.ui.creation_date
+            actions:
+                main:
+                    create:
+                        type: create
+                    update_positions:
+                        type: update_supplier_positions
+                item:
+                    update:
+                        type: update
+                    delete:
+                        type: delete

@@ -1,0 +1,14 @@
+{% from '@SyliusAdmin/Macro/translationForm.html.twig' import translationForm %}
+
+<div class="ui tab" data-tab="profile">
+    <h3 class="ui top attached header">{{ 'dameerv_sylius_supplier_plugin.ui.profile'|trans }}</h3>
+    <div class="ui attached segment">
+        <div class="ui segment">
+            {{ form_row(form.extraEmails) }}
+        </div>
+
+        {{ translationForm(form.translations) }}
+
+        {{ sylius_template_event(['dameerv_sylius_supplier_plugin.admin.supplier.' ~ action ~ '.tab_profile', 'dameerv_sylius_supplier_plugin.admin.supplier.tab_profile'], {'form': form}) }}
+    </div>
+</div>

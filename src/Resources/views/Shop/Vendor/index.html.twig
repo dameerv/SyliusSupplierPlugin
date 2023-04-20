@@ -1,0 +1,9 @@
+{% extends '@SyliusShop/layout.html.twig' %}
+
+{% block title %}{{ 'dameerv_sylius_supplier_plugin.ui.suppliers'|trans }} | {{ parent() }}{% endblock %}
+
+{% block content %}
+    {{ sylius_template_event('dameerv_sylius_supplier_plugin.shop.supplier.index.header', _context) }}
+
+    {{ sylius_template_event('dameerv_sylius_supplier_plugin.shop.supplier.index.list', _context) }}
+{% endblock %}

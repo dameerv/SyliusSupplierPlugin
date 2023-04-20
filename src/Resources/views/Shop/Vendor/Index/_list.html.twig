@@ -1,0 +1,21 @@
+{% import '@SyliusUi/Macro/messages.html.twig' as messages %}
+{% import '@SyliusUi/Macro/pagination.html.twig' as pagination %}
+
+{{ sylius_template_event('dameerv_sylius_supplier_plugin.shop.supplier.index.search', _context) }}
+
+<div class="ui clearing hidden divider"></div>
+
+{{ sylius_template_event('dameerv_sylius_supplier_plugin.shop.supplier.index.before_list', {'suppliers': resources.data}) }}
+
+{% if resources.data|length > 0 %}
+    <div class="ui doubling six column grid" id="suppliers" {{ sylius_test_html_attribute('suppliers') }}>
+        {% include '@DameervSyliusSupplierPlugin/Shop/Supplier/_suppliers.html.twig' with {'suppliers': resources.data} only %}
+    </div>
+    <div class="ui hidden divider"></div>
+
+    {{ sylius_template_event('dameerv_sylius_supplier_plugin.shop.supplier.index.before_pagination', {'suppliers': resources.data}) }}
+
+    {{ pagination.simple(resources.data) }}
+{% else %}
+    {{ messages.info('sylius.ui.no_results_to_display') }}
+{% endif %}

@@ -1,0 +1,6 @@
+dameerv_sylius_supplier_plugin_admin_ajax_supplier_generate_slug:
+    path: /generate-slug
+    methods: [GET]
+    defaults:
+        _controller: dameerv_sylius_supplier_plugin.controller.supplier_slug:generate
+        _format: json

@@ -1,0 +1,4 @@
+suites:
+    main:
+        namespace: Dameerv\SyliusSupplierPlugin
+        psr4_prefix: Dameerv\SyliusSupplierPlugin

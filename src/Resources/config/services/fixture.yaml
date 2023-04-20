@@ -1,0 +1,46 @@
+services:
+    sylius.fixture.product:
+        class: Dameerv\SyliusSupplierPlugin\Fixture\ProductFixture
+        arguments:
+            - '@sylius.manager.product'
+            - '@sylius.fixture.example_factory.product'
+        tags:
+            - { name: sylius_fixtures.fixture }
+
+    sylius.fixture.example_factory.product:
+        class: Dameerv\SyliusSupplierPlugin\Fixture\Factory\ProductExampleFactory
+        arguments:
+            - '@dameerv_sylius_supplier_plugin.repository.supplier'
+            - '@sylius.factory.product'
+            - '@sylius.factory.product_variant'
+            - '@sylius.factory.channel_pricing'
+            - '@sylius.generator.product_variant'
+            - '@sylius.factory.product_attribute_value'
+            - '@sylius.factory.product_image'
+            - '@sylius.factory.product_taxon'
+            - '@sylius.image_uploader'
+            - '@sylius.generator.slug'
+            - '@sylius.repository.taxon'
+            - '@sylius.repository.product_attribute'
+            - '@sylius.repository.product_option'
+            - '@sylius.repository.channel'
+            - '@sylius.repository.locale'
+            - '@sylius.repository.tax_category'
+            - '@file_locator'
+
+    dameerv_sylius_supplier_plugin.fixture.supplier:
+        class: Dameerv\SyliusSupplierPlugin\Fixture\SupplierFixture
+        arguments:
+            - '@dameerv_sylius_supplier_plugin.manager.supplier'
+            - '@dameerv_sylius_supplier_plugin.fixture.example_factory.supplier'
+        tags:
+            - { name: sylius_fixtures.fixture }
+
+    dameerv_sylius_supplier_plugin.fixture.example_factory.supplier:
+        class: Dameerv\SyliusSupplierPlugin\Fixture\Factory\SupplierExampleFactory
+        arguments:
+            - '@dameerv_sylius_supplier_plugin.factory.supplier'
+            - '@dameerv_sylius_supplier_plugin.uploader.supplier_logo'
+            - '@sylius.repository.channel'
+            - '@sylius.repository.locale'
+            - '@file_locator'

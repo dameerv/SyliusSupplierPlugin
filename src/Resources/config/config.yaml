@@ -1,0 +1,27 @@
+imports:
+    - { resource: fixtures.yaml }
+    - { resource: grids.yaml }
+    - { resource: resources.yaml }
+    - { resource: sylius_ui.yaml }
+
+knp_gaufrette:
+    stream_wrapper: ~
+    adapters:
+        supplier_logo:
+            local:
+                directory: "%sylius_core.public_dir%/media/supplier-logo"
+                create: true
+    filesystems:
+        supplier_logo:
+            adapter: supplier_logo
+
+liip_imagine:
+    loaders:
+        supplier_logo:
+            filesystem:
+                data_root: "%kernel.project_dir%/public/media/supplier-logo"
+    filter_sets:
+        dameerv_sylius_supplier_plugin_logo:
+            data_loader: supplier_logo
+            filters:
+                thumbnail: { size: [300, 300], mode: outbound }

@@ -1,0 +1,6 @@
+services:
+    dameerv_sylius_supplier_plugin.controller.supplier_slug:
+        class: Dameerv\SyliusSupplierPlugin\Controller\SupplierSlugController
+        public: true
+        arguments:
+            - '@sylius.generator.slug'

@@ -1,0 +1,36 @@
+services:
+    dameerv_sylius_supplier_plugin.event_listener.admin.menu_builder:
+        class: Dameerv\SyliusSupplierPlugin\Menu\AdminMenuListener
+        tags:
+            - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addAdminMenuItems }
+
+    dameerv_sylius_supplier_plugin.menu_builder.admin.supplier_form:
+        class: Dameerv\SyliusSupplierPlugin\Menu\SupplierFormMenuBuilder
+        arguments:
+            - '@knp_menu.factory'
+            - '@event_dispatcher'
+        tags:
+            - { name: knp_menu.menu_builder, method: createMenu, alias: dameerv_sylius_supplier_plugin.admin.supplier_form }
+
+    dameerv_sylius_supplier_plugin.block_event_listener.layout.supplier.javascripts:
+        class: Dameerv\SyliusSupplierPlugin\Block\SupplierJsBlockListener
+        tags:
+            - { name: kernel.event_listener, event: sonata.block.event.sylius.admin.layout.javascripts, method: onBlockEvent }
+
+    dameerv_sylius_supplier_plugin.event_listener.supplier_aware_listener:
+        class: Dameerv\SyliusSupplierPlugin\Mapping\SupplierAwareListener
+        arguments:
+            - '@sylius.resource_registry'
+            - '%dameerv_sylius_supplier_plugin.model.supplier.class%'
+            - '%sylius.model.product.class%'
+            - '%sylius.model.channel.class%'
+        tags:
+            - { name: doctrine.event_subscriber, connection: default, priority: 99 }
+
+    dameerv_sylius_supplier_plugin.event_listener.supplier_logo_upload:
+        class: Dameerv\SyliusSupplierPlugin\EventListener\SupplierLogoUploadListener
+        arguments:
+            - '@dameerv_sylius_supplier_plugin.uploader.supplier_logo'
+        tags:
+            - { name: kernel.event_listener, event: dameerv_sylius_supplier_plugin.supplier.pre_create, method: uploadLogo }
+            - { name: kernel.event_listener, event: dameerv_sylius_supplier_plugin.supplier.pre_update, method: uploadLogo }

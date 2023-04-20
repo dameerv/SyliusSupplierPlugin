@@ -1,0 +1,11 @@
+sylius_resource:
+    resources:
+        dameerv_sylius_supplier_plugin.supplier_email:
+            driver: doctrine/orm
+            classes:
+                model: Dameerv\SyliusSupplierPlugin\Entity\SupplierEmail
+                interface: Dameerv\SyliusSupplierPlugin\Entity\SupplierEmailInterface
+                form: Dameerv\SyliusSupplierPlugin\Form\Type\SupplierEmailType
+                repository: Dameerv\SyliusSupplierPlugin\Repository\SupplierEmailRepository
+                controller: Sylius\Bundle\ResourceBundle\Controller\ResourceController
+                factory: Sylius\Component\Resource\Factory\Factory

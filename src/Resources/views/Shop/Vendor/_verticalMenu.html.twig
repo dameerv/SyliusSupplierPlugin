@@ -1,0 +1,15 @@
+{{ sylius_template_event('dameerv_sylius_supplier_plugin.shop.supplier.product.index.before_vertical_menu', {'supplier': supplier}) }}
+
+<img class="ui medium circular image" src="{{ supplier.logoName|imagine_filter('dameerv_sylius_supplier_plugin_logo') }}" alt="{{ supplier.name }}">
+<div class="ui hidden divider"></div>
+
+{{ sylius_template_event('dameerv_sylius_supplier_plugin.shop.supplier.product.index.after_logo', {'supplier': supplier}) }}
+
+<h1 class="ui header">
+    <span {{ sylius_test_html_attribute('supplier-name') }}>{{ supplier.name }}</span>
+    <div class="sub header">
+        {{ supplier.description }}
+    </div>
+</h1>
+
+{{ sylius_template_event('dameerv_sylius_supplier_plugin.shop.supplier.product.index.after_vertical_menu', {'supplier': supplier}) }}

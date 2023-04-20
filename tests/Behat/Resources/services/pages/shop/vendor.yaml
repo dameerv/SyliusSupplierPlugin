@@ -1,0 +1,10 @@
+services:
+    dameerv_sylius_supplier_plugin.page.shop.vendor.index_page:
+        class: Tests\Dameerv\SyliusSupplierPlugin\Behat\Page\Shop\Vendor\IndexPage
+        parent: sylius.behat.symfony_page
+        public: false
+
+    dameerv_sylius_supplier_plugin.page.shop.vendor.show_page:
+        class: Tests\Dameerv\SyliusSupplierPlugin\Behat\Page\Shop\Vendor\ShowPage
+        parent: sylius.behat.symfony_page
+        public: false

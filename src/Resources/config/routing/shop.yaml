@@ -1,0 +1,9 @@
+dameerv_sylius_supplier_plugin_shop_supplier:
+    resource: shop/supplier.yaml
+
+dameerv_sylius_supplier_plugin_shop_supplier_product:
+    resource: shop/supplier_product.yaml
+
+dameerv_sylius_supplier_plugin_shop_partial:
+    resource: shop/partial.yaml
+    prefix: /_partial

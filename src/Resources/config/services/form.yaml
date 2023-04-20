@@ -1,0 +1,36 @@
+services:
+    dameerv_sylius_supplier_plugin.form.extension.type.product:
+        class: Dameerv\SyliusSupplierPlugin\Form\Extension\ProductTypeExtension
+        tags:
+            - { name: form.type_extension, extended_type: Sylius\Bundle\ProductBundle\Form\Type\ProductType }
+
+    dameerv_sylius_supplier_plugin.form.type.supplier_choice:
+        class: Dameerv\SyliusSupplierPlugin\Form\Type\SupplierChoiceType
+        arguments:
+            - '@dameerv_sylius_supplier_plugin.repository.supplier'
+        tags:
+            - { name: form.type , alias: dameerv_sylius_supplier_choice }
+
+    dameerv_sylius_supplier_plugin.form.type.supplier:
+        class: Dameerv\SyliusSupplierPlugin\Form\Type\SupplierType
+        arguments:
+            - '%dameerv_sylius_supplier_plugin.model.supplier.class%'
+            - ['dameerv']
+        tags:
+            - { name: form.type, alias: dameerv_sylius_supplier }
+
+    dameerv_sylius_supplier_plugin.form.type.supplier_translation:
+        class: Dameerv\SyliusSupplierPlugin\Form\Type\SupplierTranslationType
+        arguments:
+            - '%dameerv_sylius_supplier_plugin.model.supplier_translation.class%'
+            - ['dameerv']
+        tags:
+            - { name: form.type, alias: dameerv_sylius_supplier_translation }
+
+    dameerv_sylius_supplier_plugin.form.type.supplier_email:
+        class: Dameerv\SyliusSupplierPlugin\Form\Type\SupplierEmailType
+        arguments:
+            - '%dameerv_sylius_supplier_plugin.model.supplier_email.class%'
+            - ['dameerv']
+        tags:
+            - { name: form.type, alias: dameerv_sylius_supplier_email }

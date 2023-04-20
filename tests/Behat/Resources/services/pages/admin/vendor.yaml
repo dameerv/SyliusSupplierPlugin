@@ -1,0 +1,21 @@
+services:
+    dameerv_sylius_supplier_plugin.page.admin.vendor.index_page:
+        class: Tests\Dameerv\SyliusSupplierPlugin\Behat\Page\Admin\Vendor\IndexPage
+        parent: sylius.behat.page.admin.crud.index
+        public: false
+        arguments:
+            - 'dameerv_sylius_supplier_plugin_admin_vendor_index'
+
+    dameerv_sylius_supplier_plugin.page.admin.vendor.create_page:
+        class: Tests\Dameerv\SyliusSupplierPlugin\Behat\Page\Admin\Vendor\CreatePage
+        parent: sylius.behat.page.admin.crud.create
+        public: false
+        arguments:
+            - 'dameerv_sylius_supplier_plugin_admin_vendor_create'
+
+    dameerv_sylius_supplier_plugin.page.admin.vendor.update_page:
+        class: Tests\Dameerv\SyliusSupplierPlugin\Behat\Page\Admin\Vendor\UpdatePage
+        parent: sylius.behat.page.admin.crud.update
+        public: false
+        arguments:
+            - 'dameerv_sylius_supplier_plugin_admin_vendor_update'
