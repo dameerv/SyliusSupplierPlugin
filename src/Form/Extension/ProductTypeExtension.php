@@ -14,7 +14,7 @@ final class ProductTypeExtension extends AbstractTypeExtension
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
-        $builder->add('suppliers', SupplierChoiceType::class, [
+        $builder->add('supplier', SupplierChoiceType::class, [
             'label' => 'dameerv_sylius_supplier_plugin.form.product.select_supplier',
             'multiple' => true,
         ]);

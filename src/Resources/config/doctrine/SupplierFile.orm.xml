@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+
+    <mapped-superclass name="Dameerv\SyliusSupplierPlugin\Entity\SupplierFile" table="dameerv_supplier_file">
+        <id name="id" column="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+
+        <field name="type" column="type" type="string" nullable="true" />
+
+        <field name="mimeType" column="mime_type" type="string" nullable="true" />
+
+        <field name="path" />
+
+        <many-to-one field="owner" target-entity="Dameerv\SyliusSupplierPlugin\Entity\Supplier" inversed-by="files">
+            <join-column name="supplier_id" referenced-column-name="id" nullable="false" on-delete="CASCADE"/>
+        </many-to-one>
+    </mapped-superclass>
+
+</doctrine-mapping>

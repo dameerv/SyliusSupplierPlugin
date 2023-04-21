@@ -32,5 +32,11 @@
                 <cascade-all/>
             </cascade>
         </one-to-many>
+
+        <one-to-many field="files" target-entity="Dameerv\SyliusSupplierPlugin\Entity\SupplierFile" mapped-by="owner" orphan-removal="true">
+            <cascade>
+                <cascade-all/>
+            </cascade>
+        </one-to-many>
     </mapped-superclass>
 </doctrine-mapping>

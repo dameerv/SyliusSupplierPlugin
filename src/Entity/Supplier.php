@@ -47,6 +47,11 @@ class Supplier implements SupplierInterface
      */
     protected Collection $extraEmails;
 
+    /**
+     * @psalm-var Collection<array-key, FileInterface>
+     */
+    protected Collection|array $files;
+
     public function __construct()
     {
         $this->initializeTranslationsCollection();
@@ -54,6 +59,7 @@ class Supplier implements SupplierInterface
         $this->channels = new ArrayCollection();
         $this->products = new ArrayCollection();
         $this->extraEmails = new ArrayCollection();
+        $this->files = new ArrayCollection();
         $this->createdAt = new \DateTime();
     }
 

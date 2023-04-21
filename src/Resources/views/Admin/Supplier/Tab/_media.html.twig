@@ -7,7 +7,7 @@
         <div class="ui segment dameerv-image">
             {{ form_row(form.logoFile) }}
         </div>
-
+        {{ block('sylius_image_widget') }}
         {{ sylius_template_event(['dameerv_sylius_supplier_plugin.admin.supplier.' ~ action ~ '.tab_media', 'dameerv_sylius_supplier_plugin.admin.supplier.tab_media'], {'form': form}) }}
     </div>
 </div>
