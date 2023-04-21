@@ -20,7 +20,7 @@ class SupplierController extends ResourceController
     {
         $configuration = $this->requestConfigurationFactory->create($this->metadata, $request);
         $this->isGrantedOr403($configuration, ResourceActions::UPDATE);
-        $suppliers = $request->attributes->get('suppliers');
+        $suppliers = $request->attributes->get('supplier');
 
         $this->validateCsrfProtection($request, $configuration);
 
