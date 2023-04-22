@@ -40,13 +40,11 @@ final class SupplierChoiceType extends AbstractType
         $resolver->setDefaults([
             'choices' => function (Options $_options) use ($criteria, $orderBy): array {
                 $suppliers = $this->supplierRepository->findBy($criteria, $orderBy);
-
                 $choices = [];
                 /** @var SupplierInterface $supplier */
                 foreach ($suppliers as $supplier) {
                     $choices[$supplier->getName()] = $supplier;
                 }
-
                 return $choices;
             },
         ]);

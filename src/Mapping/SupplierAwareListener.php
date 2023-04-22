@@ -12,8 +12,8 @@ use Dameerv\SyliusSupplierPlugin\Entity\SupplierAwareInterface;
 use Dameerv\SyliusSupplierPlugin\Entity\SupplierInterface;
 use Dameerv\SyliusSupplierPlugin\Entity\SuppliersAwareInterface;
 use Sylius\Component\Channel\Model\ChannelInterface;
-use Sylius\Component\Core\Model\Channel;
-use Sylius\Component\Core\Model\Product;
+use Dameerv\SyliusSupplierPlugin\Entity\Channel;
+use Dameerv\SyliusSupplierPlugin\Entity\Product;
 use Sylius\Component\Product\Model\ProductInterface;
 use Sylius\Component\Resource\Metadata\RegistryInterface;
 
@@ -87,7 +87,7 @@ final class SupplierAwareListener implements EventSubscriber
 
         if (!$metadata->hasAssociation('suppliers')) {
             $metadata->mapManyToOne([
-                'fieldName' => 'supplier',
+                'fieldName' => 'suppliers',
                 'targetEntity' => $supplierMetadata->getClass('model'),
                 'inversedBy' => $inversedBy,
                 'joinColumns' => [
@@ -150,7 +150,7 @@ final class SupplierAwareListener implements EventSubscriber
 
             if (Product::class != $this->productClass) {
                 $productConfig = array_merge($productConfig, [
-                    'mappedBy' => 'supplier',
+                    'mappedBy' => 'suppliers',
                 ]);
             }
 

@@ -38,5 +38,33 @@
                 <cascade-all/>
             </cascade>
         </one-to-many>
+        <many-to-many field="channels" target-entity="Sylius\Component\Channel\Model\ChannelInterface">
+            <order-by>
+                <order-by-field name="id" />
+            </order-by>
+
+            <join-table name="dameerv_supplier_channel">
+                <join-columns>
+                    <join-column name="supplier_id" nullable="false" on-delete="CASCADE" />
+                </join-columns>
+                <inverse-join-columns>
+                    <join-column name="supplier_id" nullable="false" on-delete="CASCADE" />
+                </inverse-join-columns>
+            </join-table>
+        </many-to-many>
+        <many-to-many field="products" target-entity="Dameerv\SyliusSupplierPlugin\Entity\ProductInterface">
+            <order-by>
+                <order-by-field name="id" />
+            </order-by>
+
+            <join-table name="dameerv_supplier_product">
+                <join-columns>
+                    <join-column name="product_id" nullable="false" on-delete="CASCADE" />
+                </join-columns>
+                <inverse-join-columns>
+                    <join-column name="supplier_id" nullable="false" on-delete="CASCADE" />
+                </inverse-join-columns>
+            </join-table>
+        </many-to-many>
     </mapped-superclass>
 </doctrine-mapping>

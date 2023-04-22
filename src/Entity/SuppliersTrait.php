@@ -6,6 +6,7 @@ namespace Dameerv\SyliusSupplierPlugin\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Doctrine\ORM\PersistentCollection;
 
 trait SuppliersTrait
 {
@@ -18,7 +19,7 @@ trait SuppliersTrait
 
     public function getSuppliers(): Collection
     {
-        return $this->suppliers;
+        return $this->suppliers?? new ArrayCollection();
     }
 
     public function hasSupplier(SupplierInterface $supplier): bool

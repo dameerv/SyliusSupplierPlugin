@@ -22,6 +22,7 @@ class Supplier implements SupplierInterface
     }
     use TimestampableTrait;
     use ToggleableTrait;
+    use ProductsAwareTrait;
 
     protected ?int $id = null;
     protected ?string $name = null;
@@ -36,11 +37,6 @@ class Supplier implements SupplierInterface
      * @psalm-var Collection<array-key, ChannelInterface>
      */
     protected Collection $channels;
-
-    /**
-     * @psalm-var Collection<array-key, ProductInterface>
-     */
-    protected Collection $products;
 
     /**
      * @psalm-var Collection<array-key, SupplierEmailInterface>
@@ -174,38 +170,6 @@ class Supplier implements SupplierInterface
 
             if ($channel instanceof SuppliersAwareInterface) {
                 $channel->removeSupplier($this);
-            }
-        }
-    }
-
-    public function getProducts(): Collection
-    {
-        return $this->products;
-    }
-
-    public function hasProduct(ProductInterface $product): bool
-    {
-        return $this->products->contains($product);
-    }
-
-    public function addProduct(ProductInterface $product): void
-    {
-        if (!$this->hasProduct($product)) {
-            $this->products->add($product);
-
-            if ($product instanceof SupplierAwareInterface) {
-                $product->setSupplier($this);
-            }
-        }
-    }
-
-    public function removeProduct(ProductInterface $product): void
-    {
-        if ($this->hasProduct($product)) {
-            $this->products->removeElement($product);
-
-            if ($product instanceof SupplierAwareInterface) {
-                $product->setSupplier(null);
             }
         }
     }
