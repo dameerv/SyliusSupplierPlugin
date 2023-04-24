@@ -25,7 +25,7 @@ final class Version20230421190409 extends AbstractMigration
         $this->addSql('ALTER TABLE dameerv_supplier_product ADD CONSTRAINT FK_653BEDDA4584665A FOREIGN KEY (product_id) REFERENCES dameerv_supplier (id) ON DELETE CASCADE');
         $this->addSql('ALTER TABLE dameerv_supplier_product ADD CONSTRAINT FK_653BEDDA2ADD6D8C FOREIGN KEY (supplier_id) REFERENCES sylius_product (id) ON DELETE CASCADE');
         $this->addSql('DROP TABLE dameerv_supplier_channels');
-        $this->addSql('ALTER TABLE sylius_product DROP supplier_id');
+
     }
 
     public function down(Schema $schema): void
@@ -36,6 +36,6 @@ final class Version20230421190409 extends AbstractMigration
         $this->addSql('ALTER TABLE dameerv_supplier_channels ADD CONSTRAINT FK_E8830B372F5A1AA FOREIGN KEY (channel_id) REFERENCES sylius_channel (id)');
         $this->addSql('DROP TABLE dameerv_supplier_channel');
         $this->addSql('DROP TABLE dameerv_supplier_product');
-        $this->addSql('ALTER TABLE sylius_product ADD supplier_id INT NOT NULL');
+
     }
 }
