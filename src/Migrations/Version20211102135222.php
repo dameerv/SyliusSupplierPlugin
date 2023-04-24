@@ -26,7 +26,7 @@ final class Version20211102135222 extends AbstractMigration
         $this->addSql('ALTER TABLE dameerv_supplier_channels ADD CONSTRAINT  FK_42A3C6D2F603EE73 FOREIGN KEY (supplier_id) REFERENCES dameerv_supplier (id)');
         $this->addSql('ALTER TABLE sylius_product ADD supplier_id INT DEFAULT NULL');
         $this->addSql('ALTER TABLE sylius_product ADD CONSTRAINT  FK_677B9B74F603EE73 FOREIGN KEY (supplier_id) REFERENCES dameerv_supplier (id)');
-        $this->addSql('CREATE INDEX CONCURRENTLY IF EXISTS IDX_677B9B74F603EE73 ON sylius_product (supplier_id)');
+        $this->addSql('CREATE INDEX  IDX_677B9B74F603EE73 ON sylius_product (supplier_id)');
     }
 
     public function down(Schema $schema): void
