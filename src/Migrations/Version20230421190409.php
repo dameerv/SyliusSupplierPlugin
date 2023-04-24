@@ -22,9 +22,7 @@ final class Version20230421190409 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->addSql('CREATE TABLE IF NOT EXISTS dameerv_supplier_channel (supplier_id INT NOT NULL, PRIMARY KEY(supplier_id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE IF NOT EXISTS dameerv_supplier_product (product_id INT NOT NULL, supplier_id INT NOT NULL, INDEX IDX_653BEDDA4584665A (product_id), INDEX IDX_653BEDDA2ADD6D8C (supplier_id), PRIMARY KEY(product_id, supplier_id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
-        $this->addSql('ALTER TABLE dameerv_supplier_product DROP CONSTRAINT IF EXISTS  FK_653BEDDA4584665A');
         $this->addSql('ALTER TABLE dameerv_supplier_product ADD CONSTRAINT FK_653BEDDA4584665A FOREIGN KEY (product_id) REFERENCES dameerv_supplier (id) ON DELETE CASCADE');
-        $this->addSql('ALTER TABLE dameerv_supplier_product DROP CONSTRAINT IF EXISTS FK_653BEDDA2ADD6D8C');
         $this->addSql('ALTER TABLE dameerv_supplier_product ADD CONSTRAINT FK_653BEDDA2ADD6D8C FOREIGN KEY (supplier_id) REFERENCES sylius_product (id) ON DELETE CASCADE');
         $this->addSql('DROP TABLE IF EXISTS dameerv_supplier_channels');
 
