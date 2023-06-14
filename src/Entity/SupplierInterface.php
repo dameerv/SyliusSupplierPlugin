@@ -47,9 +47,6 @@ interface SupplierInterface extends
 
     public function setPosition(?int $position): void;
 
-    /**
-     * @psalm-return Collection<array-key, ProductInterface>
-     */
     public function getProducts(): Collection;
 
     public function hasProduct(ProductInterface $product): bool;
@@ -58,9 +55,6 @@ interface SupplierInterface extends
 
     public function removeProduct(ProductInterface $product): void;
 
-    /**
-     * @psalm-return Collection<array-key, SupplierEmailInterface>
-     */
     public function getExtraEmails(): Collection;
 
     public function hasExtraEmail(SupplierEmailInterface $email): bool;

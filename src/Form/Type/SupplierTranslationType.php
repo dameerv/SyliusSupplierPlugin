@@ -18,7 +18,6 @@ final class SupplierTranslationType extends AbstractResourceType
         $builder
             ->add('description', CKEditorType::class, [
                 'label' => 'dameerv_sylius_supplier_plugin.form.supplier.description',
-            ])
-        ;
+            ]);
     }
 }

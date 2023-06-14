@@ -19,9 +19,10 @@ final class AdminMenuListener
             $item = $menu;
         }
 
-        $item->addChild('dameerv_sylius_supplier_plugin.menu.admin.suppliers', ['route' => 'dameerv_sylius_supplier_plugin_admin_supplier_index'])
+        $item->addChild('dameerv_sylius_supplier_plugin.menu.admin.suppliers',
+            ['route' => 'dameerv_sylius_supplier_plugin_admin_supplier_index']
+        )
             ->setLabel('dameerv_sylius_supplier_plugin.menu.admin.suppliers')
-            ->setLabelAttribute('icon', 'handshake')
-        ;
+            ->setLabelAttribute('icon', 'handshake');
     }
 }

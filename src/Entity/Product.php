@@ -15,7 +15,7 @@ use Sylius\Component\Product\Model\ProductTranslationInterface;
  */
 #[ORM\Entity]
 #[ORM\Table(name: 'sylius_product')]
-class Product extends BaseProduct implements ProductInterface,  SuppliersAwareInterface
+class Product extends BaseProduct implements ProductInterface, SuppliersAwareInterface
 {
     use SuppliersTrait;
 

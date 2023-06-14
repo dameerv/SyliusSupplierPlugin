@@ -22,14 +22,12 @@ class SupplierRepository extends EntityRepository implements SupplierRepositoryI
     {
         $queryBuilder = $this->createQueryBuilder('o')
             ->andWhere('o.enabled = :enabled')
-            ->setParameter('enabled', true)
-        ;
+            ->setParameter('enabled', true);
 
         if ($channel instanceof ChannelInterface) {
             $queryBuilder->innerJoin('o.channels', 'channel')
                 ->andWhere('channel = :channel')
-                ->setParameter('channel', $channel)
-            ;
+                ->setParameter('channel', $channel);
         }
 
         return $queryBuilder;
@@ -51,7 +49,6 @@ class SupplierRepository extends EntityRepository implements SupplierRepositoryI
             ->setParameter('slug', $slug)
             ->setParameter('locale', $locale)
             ->getQuery()
-            ->getOneOrNullResult()
-        ;
+            ->getOneOrNullResult();
     }
 }

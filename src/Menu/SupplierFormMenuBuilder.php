@@ -33,20 +33,17 @@ final class SupplierFormMenuBuilder
             ->addChild('details')
             ->setAttribute('template', '@DameervSyliusSupplierPlugin/Admin/Supplier/Tab/_details.html.twig')
             ->setLabel('sylius.ui.details')
-            ->setCurrent(true)
-        ;
+            ->setCurrent(true);
 
         $menu
             ->addChild('profile')
             ->setAttribute('template', '@DameervSyliusSupplierPlugin/Admin/Supplier/Tab/_profile.html.twig')
-            ->setLabel('dameerv_sylius_supplier_plugin.ui.profile')
-        ;
+            ->setLabel('dameerv_sylius_supplier_plugin.ui.profile');
 
         $menu
             ->addChild('media')
             ->setAttribute('template', '@DameervSyliusSupplierPlugin/Admin/Supplier/Tab/_media.html.twig')
-            ->setLabel('sylius.ui.media')
-        ;
+            ->setLabel('sylius.ui.media');
 
         $this->eventDispatcher->dispatch(
             new SupplierFormMenuBuilderEvent($this->factory, $menu, $options['supplier'])

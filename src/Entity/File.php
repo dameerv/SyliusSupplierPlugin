@@ -7,23 +7,17 @@ use Symfony\Component\Mime\MimeTypes;
 
 abstract class File implements FileInterface
 {
-    /** @var mixed */
-    protected $id;
+    protected int $id;
 
-    /** @var null|string */
-    protected $type;
+    protected null|string $type;
 
-    /** @var null|string */
-    protected $mimeType;
+    protected null|string $mimeType;
 
-    /** @var SplFileInfo */
-    protected $file;
+    protected SplFileInfo $file;
 
-    /** @var string */
-    protected $path;
+    protected string $path;
 
-    /** @var object */
-    protected $owner;
+    protected object $owner;
 
     /**
      * @return int

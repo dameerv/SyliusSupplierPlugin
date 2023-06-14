@@ -10,8 +10,7 @@ use Sylius\Component\Product\Model\ProductInterface;
 
 trait ProductsAwareTrait
 {
-    /** @var Collection|ProductInterface[] */
-    protected $products;
+    protected array|Collection $products;
 
     public function initializeProductsCollection(): void
     {

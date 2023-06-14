@@ -8,9 +8,6 @@ use Doctrine\Common\Collections\Collection;
 
 interface SuppliersAwareInterface
 {
-    /**
-     * @psalm-return Collection<array-key, SupplierInterface>
-     */
     public function getSuppliers(): Collection;
 
     public function hasSupplier(SupplierInterface $supplier): bool;

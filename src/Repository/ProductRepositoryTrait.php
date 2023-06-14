@@ -13,10 +13,10 @@ trait ProductRepositoryTrait
     abstract public function createQueryBuilder($alias, $indexBy = null);
 
     public function createShopListBySupplierQueryBuilder(
-        ChannelInterface  $channel,
+        ChannelInterface $channel,
         SupplierInterface $supplier,
-        string            $locale,
-        array             $sorting = []
+        string $locale,
+        array $sorting = []
     ): QueryBuilder {
         $queryBuilder = $this->createQueryBuilder('o')
             ->distinct()
@@ -31,16 +31,14 @@ trait ProductRepositoryTrait
             ->andWhere('o.supplier = :supplier')
             ->setParameter('locale', $locale)
             ->setParameter('channel', $channel)
-            ->setParameter('supplier', $supplier)
-        ;
+            ->setParameter('supplier', $supplier);
 
         if (isset($sorting['price'])) {
             $subQuery = $this->createQueryBuilder('m')
                 ->select('min(v.position)')
                 ->innerJoin('m.variants', 'v')
                 ->andWhere('m.id = :product_id')
-                ->andWhere('v.enabled = :enabled')
-            ;
+                ->andWhere('v.enabled = :enabled');
 
             $queryBuilder
                 ->addSelect('variant')
@@ -55,8 +53,7 @@ trait ProductRepositoryTrait
                     )
                 )
                 ->setParameter('channelCode', $channel->getCode())
-                ->setParameter('enabled', true)
-            ;
+                ->setParameter('enabled', true);
         }
 
         return $queryBuilder;

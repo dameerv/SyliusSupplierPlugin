@@ -68,6 +68,6 @@ class SupplierController extends ResourceController
 
         /** @var SupplierInterface $supplierFromBase */
         $supplierFromBase = $this->repository->findOneBy(['id' => $id]);
-        $supplierFromBase->setPosition((int) $position);
+        $supplierFromBase->setPosition((int)$position);
     }
 }

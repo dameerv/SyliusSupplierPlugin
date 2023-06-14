@@ -17,7 +17,8 @@ final class SupplierJsBlockListener
         $block->setId(uniqid('', true));
         $block->setSettings(array_replace($event->getSettings(), [
             'template' => $template,
-        ]));
+        ])
+        );
         $block->setType('sonata.block.service.template');
 
         $event->addBlock($block);

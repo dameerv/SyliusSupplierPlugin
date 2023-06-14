@@ -33,19 +33,10 @@ class Supplier implements SupplierInterface
     protected ?int $position = null;
     protected bool $isVip = false;
 
-    /**
-     * @psalm-var Collection<array-key, ChannelInterface>
-     */
     protected Collection $channels;
 
-    /**
-     * @psalm-var Collection<array-key, SupplierEmailInterface>
-     */
     protected Collection $extraEmails;
 
-    /**
-     * @psalm-var Collection<array-key, FileInterface>
-     */
     protected Collection|array $files;
 
     public function __construct()
@@ -205,17 +196,11 @@ class Supplier implements SupplierInterface
         return new SupplierTranslation();
     }
 
-    /**
-     * @return bool
-     */
     public function isVip(): bool
     {
         return $this->isVip;
     }
 
-    /**
-     * @param bool $isVip
-     */
     public function setIsVip(bool $isVip): void
     {
         $this->isVip = $isVip;

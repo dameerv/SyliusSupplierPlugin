@@ -19,7 +19,7 @@ trait SuppliersTrait
 
     public function getSuppliers(): Collection
     {
-        return $this->suppliers?? new ArrayCollection();
+        return $this->suppliers ?? new ArrayCollection();
     }
 
     public function hasSupplier(SupplierInterface $supplier): bool

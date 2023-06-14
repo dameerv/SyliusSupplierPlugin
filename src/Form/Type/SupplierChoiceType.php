@@ -45,6 +45,7 @@ final class SupplierChoiceType extends AbstractType
                 foreach ($suppliers as $supplier) {
                     $choices[$supplier->getName()] = $supplier;
                 }
+
                 return $choices;
             },
         ]);

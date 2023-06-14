@@ -26,9 +26,9 @@ final class SupplierAwareListener implements EventSubscriber
 
     public function __construct(
         RegistryInterface $resourceMetadataRegistry,
-        string            $supplierClass,
-        string            $productClass,
-        string            $channelClass
+        string $supplierClass,
+        string $productClass,
+        string $channelClass
     ) {
         $this->resourceMetadataRegistry = $resourceMetadataRegistry;
         $this->supplierClass = $supplierClass;

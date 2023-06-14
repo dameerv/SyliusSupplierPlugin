@@ -29,11 +29,11 @@ final class SupplierUrlProvider implements UrlProviderInterface
     private ChannelInterface $channel;
 
     public function __construct(
-        SupplierRepositoryInterface    $supplierRepository,
-        RouterInterface                $router,
-        UrlFactoryInterface            $sitemapUrlFactory,
+        SupplierRepositoryInterface $supplierRepository,
+        RouterInterface $router,
+        UrlFactoryInterface $sitemapUrlFactory,
         AlternativeUrlFactoryInterface $urlAlternativeFactory,
-        LocaleContextInterface         $localeContext
+        LocaleContextInterface $localeContext
     ) {
         $this->supplierRepository = $supplierRepository;
         $this->router = $router;
@@ -59,9 +59,6 @@ final class SupplierUrlProvider implements UrlProviderInterface
         return $urls;
     }
 
-    /**
-     * @psalm-return Collection<array-key, TranslationInterface>
-     */
     private function getTranslations(SupplierInterface $supplier): Collection
     {
         return $supplier->getTranslations()->filter(function (TranslationInterface $translation): bool {

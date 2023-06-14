@@ -17,7 +17,6 @@ final class SupplierEmailType extends AbstractResourceType
         $builder
             ->add('value', EmailType::class, [
                 'label' => 'sylius.ui.value',
-            ])
-        ;
+            ]);
     }
 }

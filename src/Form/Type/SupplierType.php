@@ -61,8 +61,7 @@ final class SupplierType extends AbstractResourceType
                 'allow_delete' => true,
                 'by_reference' => false,
                 'required' => false,
-            ])
-        ;
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

@@ -12,9 +12,9 @@ use Sylius\Component\Core\Repository\ProductRepositoryInterface as BaseProductRe
 interface ProductRepositoryInterface extends BaseProductRepositoryInterface
 {
     public function createShopListBySupplierQueryBuilder(
-        ChannelInterface  $channel,
+        ChannelInterface $channel,
         SupplierInterface $supplier,
-        string            $locale,
-        array             $sorting = []
+        string $locale,
+        array $sorting = []
     ): QueryBuilder;
 }
